@@ -19,18 +19,24 @@ $(document).ready(function() {
   $("form#originalDeposit").submit(function(event) {
     event.preventDefault();
     const originalDeposit = parseInt($("input#originalDeposit").val());
-    let bankaccount = new BankAccount(originalDeposit);
+    let bankaccount = new BankAccount();
+    (originalDeposit);
+    $("form#originalDeposit").hide();
     $("#cashTotal").text(originalDeposit);
+    $("#deposit").show();
+    $("#withdrawal").show();
+    console.log(bankaccount);
+    console.log(originalDeposit);
   });
   $("form#deposit").submit(function(event) {
     event.preventDefault();
-    let amount = parseInt($("input#amount").val());
+    let amount = parseInt($("input.amount").val());
     $("#cashTotal").text(BankAccount.deposit(amount));
 
   });
   $("form#withdrawal").submit(function(event) {
     event.preventDefault();
-    let amount = parseInt($("input#amount").val());
+    let amount = parseInt($("input.amount").val());
     $("#cashTotal").text(BankAccount.withdrawal(amount));
   });
 });

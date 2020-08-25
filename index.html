@@ -9,8 +9,30 @@
 </head>
 <body>
   <div class="container">
-    
+    <form id="originalDeposit">
+      <div class="form-control">
+        <label>
+          <input type="number" min=0 id="originalDeposit">Enter Deposit Amount:
+        </label>
+      </div>
+      <button id="create" class="btn btn-success" type="submit">Create my Account</button>
+    </form>
+
+    <form id="deposit">
+      <label>
+        <input type="number" min=0 class="amount">Deposit Amount:
+      </label>
+      <button class="btn btn-primary" type="submit">Deposit</button>
+    </form>
+
+    <form id="withdrawal">
+      <label>
+        <input type="number" min=0 class="amount">Withdrawal Amount:
+      </label>
+      <button class="btn btn-primary" type="submit">Withdrawal</button>
+    </form>
+    <div id="cashTotal"></div>
+
   </div>
-  
 </body>
 </html>
